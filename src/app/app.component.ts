@@ -12,8 +12,7 @@ import { images } from './constant';
 export class AppComponent implements OnInit {
 
   data = images
-  imageOdd: string = ''
-  imageEven: string = ''
+  image: string = ''
   index: number = 0
   isFlip: boolean = true
 
@@ -23,8 +22,7 @@ export class AppComponent implements OnInit {
 
   onNext(index: number): void {
     this.isFlip = !this.isFlip
-    this.imageOdd = this.data[index]
-    this.imageEven = this.data[index + 2]
+    this.image = this.data[index]
     this.index = index
     if (index === images.length - 1) {
       this.index = -1
