@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   onNext(index: number): void {
     this.isFlip = !this.isFlip
     this.imageOdd = this.data[index]
-    this.imageEven = this.data[index + 1]
+    this.imageEven = this.data[index + 2]
     this.index = index
     if (index === images.length - 1) {
       this.index = -1
